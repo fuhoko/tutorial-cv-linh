@@ -1,0 +1,34 @@
+
+.container {
+  width: 420px;
+  height: 420px;
+  position: relative;
+}
+.list-item {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}	
+.item {
+  height: 205px;
+  width: 205px;
+  outline: none;
+  border: none;
+}
+input[name="r"] {
+  display: none;
+}
+.layout {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+#item-1:checked ~ #layout-1, #item-2:checked ~ #layout-2, #item-3:checked ~ #layout-3, #item-4:checked ~ #layout-4{
+  opacity: 1;
+  z-index: 1;
+}
